@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class FilterConfig {
- 
+
     @Bean
     public FilterRegistrationBean registFilter() {
         FilterRegistrationBean registration = new FilterRegistrationBean();
@@ -16,5 +16,5 @@ public class FilterConfig {
         registration.setOrder(1);
         return registration;
     }
- 
+
 }

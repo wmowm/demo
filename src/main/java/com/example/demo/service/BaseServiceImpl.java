@@ -131,6 +131,8 @@ public class BaseServiceImpl<T> implements BaseRepository<T> {
         return baseRepository.findAll(example, pageable);
     }
 
+
+
     @Override
     public <S extends T> long count(Example<S> example) {
         return baseRepository.count(example);

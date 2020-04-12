@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -23,7 +24,7 @@ public class User {
 	private String name; // 姓名
  
 	@Column(name = "Age")
-    private int age; // 年龄
+    private Integer age; // 年龄
 	
 	@Column(name = "Createtime")
     private Date createtime; //创建时间
@@ -44,16 +45,17 @@ public class User {
 		this.name = name;
 	}
  
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
  
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
  
-    public Date getCreateTime() {
-		return createtime;
+    public String getCreateTime() {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return  format.format(createtime.getTime());
 	}
  
 	public void setCreateTime(Date createtime) {
